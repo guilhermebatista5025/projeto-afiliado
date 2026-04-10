@@ -45,7 +45,7 @@ A ideia é entregar uma experiência visual forte, responsiva e otimizada para d
 ## 📂 Estrutura do projeto
 
 ```
-veltrix-store/
+projeto-afiliado/
 │
 ├── index.html
 ├── /css
@@ -63,10 +63,10 @@ veltrix-store/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/veltrix-store.git
+git clone https://github.com/seu-usuario/projeto-afiliado.git
 
 # Acesse a pasta
-cd veltrix-store
+cd projeto-afiliado
 
 # Abra o index.html no navegador
 ```
