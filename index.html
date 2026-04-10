@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Veltrix Store</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Veltrix Store</div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Produtos</li>
+        <li>Contatos</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="tech-circle">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="list">
+      <!-- ITEM 1 -->
+      <div class="item active">
+        <div class="product-img">
+          <img src="img/apple-watch.png" alt="Apple Watch" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Novo Lançamento</p>
+          <p class="product-name">Apple Watch Series 10</p>
+          <p class="description">O smartwatch mais avançado do mercado.</p>
+          <button class="btn" onclick="window.location.href='https://www.apple.com/br/watch/compare/?modelList=watch-series-10,watch-series-11'">
+            Saiba Mais
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="item">
+      <div class="product-img">
+        <img src="img/air-pods.png" alt="AirPods Max" />
+      </div>
+      <div class="content">
+        <p class="product-tag">Som Premium</p>
+        <p class="product-name">AirPods Max</p>
+        <p class="description">Som espacial imersivo e design premium.</p>
+        <button class="btn" onclick="window.location.href='https://www.apple.com/br/shop/buy-airpods/airpods-max/azul'">
+          Saiba Mais
+        </button>
+      </div>
+    </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="item">
+      <div class="product-img">
+        <img src="img/vision-pro.png" alt="Vision Pro" />
+      </div>
+      <div class="content">
+        <p class="product-tag">Alta Performance</p>
+        <p class="product-name">Vision Pro</p>
+        <p class="description">A realidade mista do futuro chegou.</p>
+        <button class="btn" onclick="window.location.href='https://www.apple.com/shop/buy-vision/apple-vision-pro'">
+          Saiba Mais
+        </button>
+      </div>
+    </div>
+    </div>
+
+    <!-- ARROWS -->
+    <div class="arrows">
+      <button class="arrow-btn" id="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z" />
+          <path fill-rule="evenodd"
+            d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+        </svg>
+      </button>
+
+      <button class="arrow-btn" id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+          <path fill-rule="evenodd"
+            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- INDICATORS -->
+    <div class="indicators">
+      <div class="numbers">01</div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="js/script.js"></script>
+
+</html>
