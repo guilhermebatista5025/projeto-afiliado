@@ -1,122 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/ico" sizes="180x180" href="img/Logo futurista da Veltrix Store.ico">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <title>Veltrix Store</title>
 </head>
-
 <body>
-  <header>
-    <div class="logo">Veltrix Store</div>
-    <nav>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="logo">Veltrix<span>.</span></div>
+
+    <nav class="nav-desktop">
       <ul>
-        <li>Home</li>
+        <li class="active">Home</li>
         <li>Produtos</li>
         <li>Contatos</li>
       </ul>
     </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Drawer mobile -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li class="active">Home</li>
+        <li>Produtos</li>
+        <li>Contatos</li>
+      </ul>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
   </header>
 
+  <!-- ===== MAIN ===== -->
   <main class="container">
+
+    <!-- Fundo decorativo -->
+    <div class="bg-glow"></div>
     <div class="tech-circle">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+      <div class="circle c4"></div>
     </div>
 
-    <div class="list">
+    <!-- Grid de partículas -->
+    <div class="grid-lines"></div>
+
+    <!-- ===== SLIDES ===== -->
+    <div class="list" id="slider">
+
       <!-- ITEM 1 -->
-      <div class="item active">
+      <div class="item active" data-index="0">
         <div class="product-img">
-          <img src="img/apple-watch.png" alt="Apple Watch" />
+          <div class="img-glow"></div>
+          <img src="img/apple-watch.png" alt="Apple Watch Series 10" />
         </div>
         <div class="content">
           <p class="product-tag">Novo Lançamento</p>
-          <p class="product-name">Apple Watch Series 10</p>
-          <p class="description">O smartwatch mais avançado do mercado.</p>
-          <button class="btn" onclick="window.location.href='https://www.apple.com/br/watch/compare/?modelList=watch-series-10,watch-series-11'">
-            Saiba Mais
+          <h2 class="product-name">Apple Watch<br>Series 10</h2>
+          <p class="description">O smartwatch mais avançado do mercado, com sensor de saúde de nova geração e autonomia incrível.</p>
+          <div class="price-tag">A partir de <strong>R$ 4.299</strong></div>
+          <button class="btn" onclick="window.open('https://www.apple.com/br/watch/compare/?modelList=watch-series-10,watch-series-11')">
+            <span>Saiba Mais</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
           </button>
         </div>
       </div>
-    </div>
 
-    <!-- ITEM 2 -->
-    <div class="item">
-      <div class="product-img">
-        <img src="img/air-pods.png" alt="AirPods Max" />
+      <!-- ITEM 2 -->
+      <div class="item" data-index="1">
+        <div class="product-img">
+          <div class="img-glow"></div>
+          <img src="img/air-pods.png" alt="AirPods Max" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Som Premium</p>
+          <h2 class="product-name">AirPods<br>Max</h2>
+          <p class="description">Som espacial imersivo com cancelamento ativo de ruído e design premium em alumínio.</p>
+          <div class="price-tag">A partir de <strong>R$ 5.499</strong></div>
+          <button class="btn" onclick="window.open('https://www.apple.com/br/shop/buy-airpods/airpods-max/azul')">
+            <span>Saiba Mais</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="content">
-        <p class="product-tag">Som Premium</p>
-        <p class="product-name">AirPods Max</p>
-        <p class="description">Som espacial imersivo e design premium.</p>
-        <button class="btn" onclick="window.location.href='https://www.apple.com/br/shop/buy-airpods/airpods-max/azul'">
-          Saiba Mais
-        </button>
+
+      <!-- ITEM 3 -->
+      <div class="item" data-index="2">
+        <div class="product-img">
+          <div class="img-glow"></div>
+          <img src="img/vision-pro.png" alt="Apple Vision Pro" />
+        </div>
+        <div class="content">
+          <p class="product-tag">Alta Performance</p>
+          <h2 class="product-name">Vision<br>Pro</h2>
+          <p class="description">A realidade mista do futuro chegou. Computação espacial com display micro‑OLED ultra‑nítido.</p>
+          <div class="price-tag">A partir de <strong>R$ 27.999</strong></div>
+          <button class="btn" onclick="window.open('https://www.apple.com/shop/buy-vision/apple-vision-pro')">
+            <span>Saiba Mais</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-    </div>
 
-    <!-- ITEM 3 -->
-    <div class="item">
-      <div class="product-img">
-        <img src="img/vision-pro.png" alt="Vision Pro" />
-      </div>
-      <div class="content">
-        <p class="product-tag">Alta Performance</p>
-        <p class="product-name">Vision Pro</p>
-        <p class="description">A realidade mista do futuro chegou.</p>
-        <button class="btn" onclick="window.location.href='https://www.apple.com/shop/buy-vision/apple-vision-pro'">
-          Saiba Mais
-        </button>
-      </div>
-    </div>
-    </div>
+    </div><!-- /list -->
 
-    <!-- ARROWS -->
-    <div class="arrows">
-      <button class="arrow-btn" id="prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-          class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z" />
-          <path fill-rule="evenodd"
-            d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
-        </svg>
-      </button>
+    <!-- ===== ARROWS ===== -->
+    <button class="arrow-btn" id="prev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </button>
 
-      <button class="arrow-btn" id="next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-          class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
-          <path fill-rule="evenodd"
-            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
-        </svg>
-      </button>
-    </div>
+    <button class="arrow-btn" id="next" aria-label="Próximo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
 
-    <!-- INDICATORS -->
+    <!-- ===== INDICATORS ===== -->
     <div class="indicators">
-      <div class="numbers">01</div>
+      <div class="number-display">
+        <span class="num-current">01</span>
+        <span class="num-sep">/</span>
+        <span class="num-total">03</span>
+      </div>
       <div class="dots">
         <div class="dot active"></div>
         <div class="dot"></div>
         <div class="dot"></div>
       </div>
+      <!-- Barra de progresso do autoplay -->
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
     </div>
-  </main>
-</body>
-<script src="js/script.js"></script>
 
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
